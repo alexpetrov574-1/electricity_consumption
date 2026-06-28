@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Energy AI</string>
+
+    <!-- Labels -->
+    <string name="label_t_out">Temperature outside (°C)</string>
+    <string name="label_t_in">Temperature inside (°C)</string>
+    <string name="label_humidity">Humidity (%)</string>
+    <string name="label_lights">Lights (Wh)</string>
+    <string name="label_lag">Consumption 10 min ago (Wh)</string>
+
+    <!-- Result -->
+    <string name="result_placeholder">—</string>
+    <string name="result_unit">Wh (forecast for 10 min)</string>
+
+    <!-- Buttons -->
+    <string name="btn_predict">Predict</string>
+
+    <!-- Errors -->
+    <string name="error_empty">Fill all fields</string>
+    <string name="error_network">No connection to server</string>
+</resources>

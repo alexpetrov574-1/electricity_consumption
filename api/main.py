@@ -26,7 +26,7 @@ logger = logging.getLogger(__name__)
 # ============================================================
 # Пути к артефактам
 # ============================================================
-BASE_DIR = "/api/project"  # текущая рабочая директория (где запущен notebook)
+BASE_DIR = "/"  # текущая рабочая директория (где запущен notebook)
 os.chdir(BASE_DIR)
 MODEL_PATH = os.path.join(BASE_DIR, "models", "xgb_model.pkl")
 FEATURES_PATH = os.path.join(BASE_DIR, "models", "feature_names.pkl")
@@ -181,14 +181,14 @@ async def predict_energy(request: PredictionRequest):
 print("\n" + "="*70)
 print("🚀 ЗАПУСК FASTAPI СЕРВЕРА")
 print("="*70)
-print(f"📖 Откройте в браузере: http://localhost:8000/docs")
-print(f"🔍 Health check:       http://localhost:8000/health")
+print(f"📖 Откройте в браузере: http://192.168.0.13:8000/docs")
+print(f"🔍 Health check:       http://192.168.0.13:8000/health")
 print("="*70 + "\n")
 
 # ✅ КЛЮЧЕВОЕ ИСПРАВЛЕНИЕ: передаём объект app, а не строку "main:app"
 uvicorn.run(
-    app,           # ← сам объект FastAPI-приложения
-    host="0.0.0.0",
+    app,
+    host="192.168.0.13",
     port=8000,
     log_level="info"
 )
